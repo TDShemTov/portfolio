@@ -1,10 +1,10 @@
 /* NAVBAR SECTION CSS */
 #navbar {
-  position: static;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #cccccc;
-  padding: 10px;
+  padding: 5px;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -15,12 +15,12 @@
 .logo img {
   max-width: 40px;
   height: auto;
+  margin-left: 3px; /* Add some space to the left */
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  align-items: center;
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -37,30 +37,46 @@
 }
 
 /* INTRO SECTION CSS */
-.intro-visuals{
+.intro-visuals {
   display: grid;
-  justify-content: start;
-  align-items: center;
-  height: 100vh; /* full viewport height */
+  align-items: center; /* Vertically align items in the grid rows */
+  height: 100vh; /* Consider removing or adjusting this */ 
   background-color: #f3f3f3; /* light grey background */
-  grid-template-columns: 40% 60%; /* 40% for image, 60% for text */
-  grid-gap: 20px; /* space between columns */
-  grid-template-columns: 
-  "txt img"
-  "txt img";
+  grid-template-columns: 40% 60%; /* 40% for text, 60% for image */
+  grid-template-rows: auto auto; /* Let rows adjust to content height */
+  grid-template-areas:
+    "txt1 img"
+    "txt2 txt2"; 
+  grid-gap: 20px; /* space between columns and rows */
+  padding: 20px; /* Add some padding around the grid */
 }
 
-.intro-visuals img {
-  max-width: 100%; /* responsive image */
-  height: auto; /* maintain aspect ratio */
-  border-radius: 8px; /* rounded corners */
+.intro-container {
+  padding: 20px; /* padding for the text container */
+  grid-area: txt;
 }
+
 .intro-visuals h1 {
-  font-size: 2.5em; /* larger font size */
+  font-size: 2.5em;
 }
 
+#intro-img{
+  display: flex;
+  justify-content: center; /* center the image */
+  align-items: center; /* center the image vertically */
+  grid-area: img; /* assign the image to the grid area */
+}
+
+#intro-img img {
+  max-width: 70%; /* limit the image width within its container */
+  max-height: 70%; /* limit the image height within its container */
+  object-fit: contain; /* preserve aspect ratio and fit within the bounds */
+  border-radius: 10px; /* rounded corners for the image */
+  box-shadow: #3a3a3a 5px 2px 7px; /* shadow for the image */
+}
 /* PROJECT SECTION CSS */
 .projects-section {
+  height: 100vh;
   padding: 30px 20px; /* padding for space between sections */
   text-align: center; /* centering text */
 }
