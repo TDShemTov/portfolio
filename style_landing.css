@@ -36,6 +36,29 @@
   color: black;
 }
 
+/* INTRO SECTION CSS */
+.intro-visuals{
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  background-color: #f3f3f3; /* light grey background */
+  grid-template-columns: 40% 60%; /* 40% for image, 60% for text */
+  grid-gap: 20px; /* space between columns */
+  grid-template-columns: 
+  "txt img"
+  "txt img";
+}
+
+.intro-visuals img {
+  max-width: 100%; /* responsive image */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 8px; /* rounded corners */
+}
+.intro-visuals h1 {
+  font-size: 2.5em; /* larger font size */
+}
+
 /* PROJECT SECTION CSS */
 .projects-section {
   padding: 30px 20px; /* padding for space between sections */
