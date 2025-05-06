@@ -73,22 +73,24 @@
   object-fit: contain; /* preserve aspect ratio and fit within the bounds */
   border-radius: 10px; /* rounded corners for the image */
   box-shadow: #3a3a3a 5px 2px 7px; /* shadow for the image */
-}
-/* PROJECT SECTION CSS */
+}/* PROJECT SECTION CSS */
 .projects-section {
-  height: 100vh;
   padding: 30px 20px; /* padding for space between sections */
   text-align: center; /* centering text */
 }
 
 .projects-section h2 {
   margin-top: 0; /* remove margin from top */
-} 
+}
 
 .projects-flex {
-  display: flex;
-  flex-direction: row; 
-  justify-content: center; /* align the projects horizontally */
+  display: grid;
+  /* according to w3schools repeat() repeats a set of columns in the grid */
+  /* auto-fit will fit as many columns as possible in the container */
+  /* minmax sets a minimum and maximum size for the columns */
+  /* minmax(300px, 1fr) means each column will be at least 300px wide */
+  /* this way if i want to add more projects, it should work fine*/
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
   gap: 20px; /* add some spacing between the project items */
   margin-top: 50px; /* add some space between the title and the grid */
 }
@@ -98,7 +100,8 @@
   border-radius: 8px; /* rounded corners */
   padding: 20px;
   text-align: center; /* center content for proj container*/
-  max-width: 300px; 
+  /* width: 30%; Remove fixed width when using grid */
+  max-width: 500px; /* Still a good idea to have a max-width */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* some shadow for nice look*/
 }
 
@@ -110,7 +113,7 @@
 }
 
 .project-title {
-  margin-top:0;
+  margin-top: 0;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
