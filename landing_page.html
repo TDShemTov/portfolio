@@ -7,54 +7,106 @@
 </head>
 <body>
 
-  <div class="page-grid">
-    <section class="intro-visuals">
-      <header>
-        <h1>Hi, <br/>My name is</h1>
-        <p>I am a CS Student</p>
-        <p>Here you can find links to my projects and social media.</p>
-          <a href="some.pdf" class="button">Resume</a>
-          <a href="https://github.com/yourname" class="button">GitHub</a>
-          <a href="social_media.html" class="button">LinkedIn</a>
+  <nav id="navbar">
+    <div class="logo">
+      <a href="#home"><img src="T_logo.jpeg" alt="Logo"> </a>
+    </div>
+    <div class="navbar-list">
+      <ul class="navbar-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- home section -->
+  <section id="home" class="intro-visuals">
+    <div class="content">
+      <h1>Hi,<br>My name is</h1>
+      <p>I am a CS Student</p>
+      <p>Here you can find links to my projects and social media.</p>
+      <div class="links">
+        <a href="some.pdf" class="button">Resume</a>
+        <a href="https://github.com/yourname" class="button">GitHub</a>
+        <a href="social_media.html" class="button">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-      </header>
-    </section>
-    <main>
-      <section class="projects-section">
-        <h2>Projects</h2>
+  <!-- projects section -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-flex">
+      <div class="project">
 
-        <div class="projects-grid">
-          <article class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-            <a href="project_1.html" class="button">View Project</a>
-          </article>
-
-          <article class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-            <a href="project_2.html" class="button">View Project</a>
-          </article>
-
-          <article class="project">
-            <h3>Project 3</h3>
-            <p>Description of Project 3.</p>
-            <a href="project_3.html" class="button">View Project</a>
-          </article>
-
-          <article class="project">
-            <h3>Project 4</h3>
-            <p>Description of Project 4.</p>
-            <a href="project_4.html" class="button">View Project</a>
-          </article>
+        <div class="project-image">
+          <img src="project_1.jpg" alt="Project 1" />
         </div>
-      </section>
-    </main>
 
-    <footer>
-    </footer>
+        <div class="project-title">
+          <h3>Project 1</h3>
+        </div>
 
-  </div>
+        <div class="project-description">
+          <p>Description of Project 1.</p>
+        </div>
+
+        <div class="project-button">
+          <a href="project_1.html" class="button">View Project</a>
+        </div>
+        
+      </div>
+
+      <div class="project">
+
+        <div class="project-image">
+          <img src="project_2.jpg" alt="Project 2" />
+        </div>
+
+        <div class="project-title">
+          <h3>Project 2</h3>
+        </div>
+
+        <div class="project-description">
+          <p>Description of Project 2.</p>
+        </div>
+
+        <div class="project-button">
+          <a href="project_2.html" class="button">View Project</a>
+        </div>
+    </div>
+
+    <div class="project">
+
+      <div class="project-image">
+        <img src="project_3.jpg" alt="Project 3" />
+      </div>
+
+      <div class="project-title">
+        <h3>Project 3</h3>
+      </div>
+
+      <div class="project-description">
+        <p>Description of Project 3.</p>
+      </div>
+
+      <div class="project-button">
+        <a href="project_3.html" class="button">View Project</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Experience</h2>
+    <div class="skills-grid">some info</div>
+  </section>
 
 </body>
 </html>
