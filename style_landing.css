@@ -1,9 +1,25 @@
+/* taking out global margin */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 50px; /* avoid nav overlap */
+}
+
+
 /* NAVBAR SECTION CSS */
 #navbar {
+  border: 1px solid black; /* Add a small black border */
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #cccccc;
+  background-color: #fafafa;
   padding: 5px;
   z-index: 1000;
   display: flex;
@@ -15,7 +31,7 @@
 .logo img {
   max-width: 40px;
   height: auto;
-  margin-left: 3px; /* Add some space to the left */
+  margin-left: 2px; /* add some space to the left */
 }
 
 .navbar-links {
@@ -24,12 +40,15 @@
   gap: 20px;
   margin: 0;
   padding: 0;
+  margin-right: 30px;
 }
 
 .navbar-links li a {
-  color: white;
+  color: #000000;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .navbar-links li a:hover {
@@ -37,27 +56,49 @@
 }
 
 /* INTRO SECTION CSS */
+#home {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden; /* this way code doesn't spill out */
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.intro-visuals {
+  position: relative;
+  z-index: 1; /* bring content above particles */
+}
+
+
 .intro-visuals {
   display: grid;
-  align-items: center; /* Vertically align items in the grid rows */
-  height: 100vh; /* Consider removing or adjusting this */ 
-  background-color: #f3f3f3; /* light grey background */
+  align-items: center; /* vertically align items in the grid rows */
+  height: 100vh; 
   grid-template-columns: 40% 60%; /* 40% for text, 60% for image */
-  grid-template-rows: auto auto; /* Let rows adjust to content height */
+  grid-template-rows: auto auto; /* let rows adjust to content height */
   grid-template-areas:
     "txt1 img"
     "txt2 txt2"; 
   grid-gap: 20px; /* space between columns and rows */
-  padding: 20px; /* Add some padding around the grid */
+  padding: 20px; 
 }
+
 
 .intro-container {
   padding: 20px; /* padding for the text container */
-  grid-area: txt;
+  grid-area: txt1;
 }
 
 .intro-visuals h1 {
-  font-size: 2.5em;
+  font-size: 4em;
+  font-weight: 800;
 }
 
 #intro-img{
@@ -73,8 +114,11 @@
   object-fit: contain; /* preserve aspect ratio and fit within the bounds */
   border-radius: 10px; /* rounded corners for the image */
   box-shadow: #3a3a3a 5px 2px 7px; /* shadow for the image */
-}/* PROJECT SECTION CSS */
+}
+
+/* PROJECT SECTION CSS */
 .projects-section {
+  background-color: #f8f8f8;
   padding: 30px 20px; /* padding for space between sections */
   text-align: center; /* centering text */
 }
@@ -85,6 +129,7 @@
 
 .projects-flex {
   display: grid;
+  height: 100vh;
   /* according to w3schools repeat() repeats a set of columns in the grid */
   /* auto-fit will fit as many columns as possible in the container */
   /* minmax sets a minimum and maximum size for the columns */
@@ -134,4 +179,31 @@
 
 .project-button .button:hover {
   background-color: #3a3a3a;
+}
+
+/* SKILLS SECTION CSS */
+.skills-section {
+  background-color: #ffffff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.1);
+}
+.skill-card img {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 10px;
 }
