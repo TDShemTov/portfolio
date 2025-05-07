@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <title>Landing Page</title>
   <link rel="stylesheet" href="style_landing.css" />
+  
 </head>
 <body>
 
@@ -30,7 +31,7 @@
 
   <!-- home section -->
   <section id="home" class="intro-section">
-    <div id="particles-js"></div>
+    <div id="particles-js-home"></div>
 
     <div class="intro-visuals">
       <div class="intro-container">
@@ -38,19 +39,23 @@
         <p id="intro-description">A Computer Science Student passionate about building impactful projects.</p>
         <p id="intro-subtext">Explore my work, skills, and connect with me below.</p>
         <div id="intro-links">
-          <a href="some.pdf" class="button primary-button">View Resume</a>
-          <a href="https://github.com/yourname" class="button secondary-button">GitHub</a>
-          <a href="social_media.html" class="button secondary-button">LinkedIn</a>
-        </div>
+          <a href="resume.pdf" class="resume-button" target="_blank">View Resume</a>
+          <a href="https://github.com/TDShemTov" class="socials-button" target="_blank">
+            <img src="github_logo.png" alt="GitHub" class="social-icon" />
+          </a>
+          <a href="https://linkedin.com/in/tshemtov" class="socials-button" target="_blank">
+            <img src="linkedin_logo.png" alt="LinkedIn" class="social-icon" />
+          </a> 
+        </div>        
       </div>
       <div id="intro-img">
         <img src="snorlax.jpg" alt="profile_image" />
       </div>
     </div>
 
-    <div class="about_me">
+    <div id="about_me">
       <h2>About Me</h2>
-      <p>I'm a Computer Science student with a passion for technology and innovation. I enjoy solving complex problems and building applications that make a difference.</p>
+      <p>I'm a senior majoring in Computer Science at California State University, ___, with a passion for pushing boundaries and turning complex ideas into practical, creative solutions. An example of my current work is my research paper that explores how we can better interpret neural networks by embedding neurons based on their activation patterns. Whether I’m writing code or diving into machine learning theory, I’m always driven by curiosity and a desire to build things that matter.</p>
     </div>
   </section>
 
@@ -61,15 +66,15 @@
       <div class="project">
 
         <div class="project-image">
-          <img src="project_1.jpg" alt="Project 1" />
+          <img src="cnn_prune_logo.png" alt="pruning cnn" />
         </div>
 
         <div class="project-title">
-          <h3>Project 1</h3>
+          <h3>Pruning Convolutional Neural Networks Using Filter Embeddings</h3>
         </div>
 
         <div class="project-description">
-          <p>Description of Project 1.</p>
+          <p>This research paper was published in the CSU Undergraduate Conference.</p>
         </div>
 
         <div class="project-button">
@@ -81,15 +86,15 @@
       <div class="project">
 
         <div class="project-image">
-          <img src="project_2.jpg" alt="Project 2" />
+          <img src="write-it_logo.png" alt="write-it_logo" />
         </div>
 
         <div class="project-title">
-          <h3>Project 2</h3>
+          <h3>Write-It</h3>
         </div>
 
         <div class="project-description">
-          <p>Description of Project 2.</p>
+          <p>Made for a Microsoft AI Hackathon to allow users to freely write their own creative stories.</p>
         </div>
 
         <div class="project-button">
@@ -100,15 +105,15 @@
     <div class="project">
 
       <div class="project-image">
-        <img src="project_3.jpg" alt="Project 3" />
+        <img src="insightify_logo.png" alt="insightify_logo" />
       </div>
 
       <div class="project-title">
-        <h3>Project 3</h3>
+        <h3>Insightify: Sentiment Analysis</h3>
       </div>
 
       <div class="project-description">
-        <p>Description of Project 3.</p>
+        <p>A tool used to descern tone of a sentence alongside whether it is spam or not.</p>
       </div>
 
       <div class="project-button">
@@ -116,10 +121,54 @@
       </div>
       
     </div>
+
+    <div class="project">
+
+      <div class="project-image">
+        <img src="shoeclass_logo.png" alt="shoeclass_logo" />
+      </div>
+
+      <div class="project-title">
+        <h3>Shoe Classification</h3>
+      </div>
+
+      <div class="project-description">
+        <p>A tool that allows you to find a shoe's brand and model by snapping a picture of the shoe in real-time.</p>
+      </div>
+
+      <div class="project-button">
+        <a href="project_3.html" class="button">View Project</a>
+      </div>
+      
+    </div>
+    
+    <!-- saved for the future -->
+    <!-- <div class="project">
+
+      <div class="project-image">
+        <img src="arduino_logo.png" alt="arduino_logo" />
+      </div>
+
+      <div class="project-title">
+        <h3>Arduino Sound Level Monitor</h3>
+      </div>
+
+      <div class="project-description">
+        <p>Using a small computer to detect sound decibels in real-time.</p>
+      </div>
+
+      <div class="project-button">
+        <a href="project_3.html" class="button">View Project</a>
+      </div>
+      
+    </div> -->
+
     </div>
   </section>
 
   <section id="skills" class="skills-section">
+    <div id="particles-js-skills"></div>
+
     <h2>Skills & Experience</h2>
     <div class="skills-grid">
       <div class="skill-card">
@@ -149,6 +198,8 @@
     </div>
     
   </section>
+
+  <!-- connect to the partices.js file -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="particles.js"></script>
 </body>

@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
 html {
@@ -12,26 +12,35 @@ section {
   scroll-margin-top: 50px; /* avoid nav overlap */
 }
 
-
+h2 {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 20px; /* space between title and content */
+}
 /* NAVBAR SECTION CSS */
 #navbar {
-  border: 1px solid black; /* Add a small black border */
+  border-bottom: 2px solid #e0e0e0; /* border for effect */
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #fafafa;
-  padding: 5px;
+  padding: 10px 20px;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* shadow for depth */
 }
 
 .logo img {
   max-width: 40px;
   height: auto;
   margin-left: 2px; /* add some space to the left */
+}
+.logo img:hover {
+  transform: scale(1.2); /* scale up the logo on hover */
+  transition: transform 0.1s ease-in-out; /* smooth transition */
 }
 
 .navbar-links {
@@ -51,31 +60,40 @@ section {
   font-weight: 600;
 }
 
-.navbar-links li a:hover {
-  color: black;
+#navbar .navbar-links li a:hover {
+  color:#3f3f3f;
+  text-decoration: underline;
 }
 
 /* INTRO SECTION CSS */
-#home {
-  background-color: #ffffff;
-  position: relative;
-  overflow: hidden; /* this way code doesn't spill out */
-}
 
-#particles-js {
+/* add the particles to home and skills sections */
+#particles-js-home,
+#particles-js-skills {
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
-  width: 100%;
+  width: 100%; 
   height: 100%;
-  z-index: 0;
+  z-index: 0;         
 }
 
-.intro-visuals {
-  position: relative;
-  z-index: 1; /* bring content above particles */
+/* for modularity coding for both */
+#home,
+#skills {
+  position: relative; /* this way the particles are behind the content */
+  overflow: hidden; /* this way code doesn't spill out */
+  min-height: 100vh;
+  background-color: #ffffff;
 }
 
+/* 3) bring content above the particles */
+.intro-visuals,
+.about_me,
+.skills-grid {
+  position: relative;  
+  z-index: 1; /* this way the content is above the particles */
+}
 
 .intro-visuals {
   display: grid;
@@ -116,6 +134,57 @@ section {
   box-shadow: #3a3a3a 5px 2px 7px; /* shadow for the image */
 }
 
+#intro-links {
+  display: flex;
+  justify-content: flex-start; /* or center if you prefer */
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap; /* allows buttons to wrap on smaller screens */
+}
+
+#intro-links .resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.socials-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  grid-area: txt1;
+}
+
+.resume-button:hover,
+.socials-button:hover {
+  transform: scale(1.08); /* scale up the logo on hover */
+  transition: transform 0.3s ease-in-out; 
+}
+
+.social-icon {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+#about_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* horizontally center */
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: -10%;
+}
+
+
 /* PROJECT SECTION CSS */
 .projects-section {
   background-color: #f8f8f8;
@@ -141,32 +210,37 @@ section {
 }
 
 .project {
+  display: flex;                
+  flex-direction: column;        /* stack vertically */
+  justify-content: space-between;/* only way i found to push button to bottom */
+  align-items: center;           /* center everything horizontally */
   border: 1px solid #ccc;
-  border-radius: 8px; /* rounded corners */
+  border-radius: 8px;
   padding: 20px;
-  text-align: center; /* center content for proj container*/
-  /* width: 30%; Remove fixed width when using grid */
-  max-width: 500px; /* Still a good idea to have a max-width */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* some shadow for nice look*/
+  max-width: 500px;
+  max-height: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-image {
+  width: 100%;                   /* take full card width */
+  display: flex;
+  justify-content: center;       /* center the img */
+  align-items: center;        
 }
 
 .project-image img {
-  max-width: 100%; /* this ensures img doesn't exceed container size */
+  max-width: 70%;                /* scale img relative to card */
   height: auto;
   border-radius: 4px;
-  margin-bottom: 10px;
+  object-fit: contain;
 }
-
-.project-title {
-  margin-top: 0;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.project-image:hover img {
+  transform: scale(1.05);        /* scale up the image on hover */
+  transition: transform 0.3s ease-in-out; /* smooth transition */
 }
-
-.project-description p {
-  margin-bottom: 15px;
-}
-
 .project-button .button {
   display: inline-block;
   padding: 10px 20px;
@@ -178,15 +252,21 @@ section {
 }
 
 .project-button .button:hover {
-  background-color: #3a3a3a;
+  transform: scale(1.05);        
+  transition: transform 0.3s ease-in-out; 
+  background-color: #494848;
 }
 
 /* SKILLS SECTION CSS */
 .skills-section {
+  text-align: center;
   background-color: #ffffff;
+  position: relative;
+  overflow: hidden; /* this way code doesn't spill out */
 }
 
 .skills-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
