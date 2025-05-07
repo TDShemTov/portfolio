@@ -69,4 +69,5 @@ document.addEventListener("DOMContentLoaded", function() {
   if (document.getElementById("particles-js-skills")) {
     particlesJS("particles-js-skills", particlesConfig);
   }
+  
 });

@@ -122,7 +122,7 @@ h3 {
 }
 
 .intro-visuals h1 {
-  font-size: 4em;
+  font-size: 4.5em;
   font-weight: 800;
 }
 
@@ -131,19 +131,35 @@ h3 {
   justify-content: center; /* center the image */
   align-items: center; /* center the image vertically */
   grid-area: img; /* assign the image to the grid area */
+  margin-left: 145px;
 }
 
 #intro-img img {
-  max-width: 70%; /* limit the image width within its container */
-  max-height: 70%; /* limit the image height within its container */
+  max-width: 60%; /* limit the image width within its container */
+  max-height: auto; /* limit the image height within its container */
   object-fit: contain; /* preserve aspect ratio and fit within the bounds */
   border-radius: 10px; /* rounded corners for the image */
   box-shadow: #3a3a3a 5px 2px 7px; /* shadow for the image */
 }
 
+#intro-img img:hover {
+  transform: scale(1.05); /* scale up the image on hover */
+  transition: transform 0.3s ease-in-out; /* smooth transition */
+}
+
+.intro-text {
+  max-width: 750px;       /* never wider than 600px */
+  width: 80%;             /* but take up to 90% of the grid column */
+  margin: 0 auto;         /* center it in its grid area */
+}
+
+
 #intro-links {
+  margin-left: auto; /* push to center */
+  margin-right: auto; /* push to center */
+  max-width: 70%;
+  grid-area: txt1;
   display: flex;
-  justify-content: flex-start; /* or center if you prefer */
   align-items: center;
   gap: 16px;
   margin-top: 16px;
@@ -158,10 +174,14 @@ h3 {
   text-decoration: none;
   border-radius: 5px;
 }
+.intro-container p {
+  font-size: 1.5em;
+}
 
-
+#about_me p{
+  font-size:1.3em;
+}
 .socials-button {
-  padding: 8px 16px;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -205,13 +225,12 @@ h3 {
 
 .projects-flex {
   display: grid;
-  height: 100vh;
   /* according to w3schools repeat() repeats a set of columns in the grid */
   /* auto-fit will fit as many columns as possible in the container */
   /* minmax sets a minimum and maximum size for the columns */
   /* minmax(300px, 1fr) means each column will be at least 300px wide */
   /* this way if i want to add more projects, it should work fine*/
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
   gap: 20px; /* add some spacing between the project items */
   margin-top: 50px; /* add some space between the title and the grid */
 }
@@ -306,10 +325,77 @@ h3 {
   display: flex;
   flex-direction: column; /* stack items vertically */
   align-items: center; /* center items horizontally */
-  gap: 10px; /* add spacing between items */
   height: auto;
 }
 
 .footer-section{
   text-align: center;
+}
+
+/* attempt at fade in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+
+/* MEDIA */
+
+/* hopefully this solves my phone issue but i will check */
+@media (max-width: 600px) {
+  .projects-flex {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .project {
+    padding: 10px;
+  }
+  h2 { 
+    font-size: 2.5em; 
+  }
+  h3 { 
+    font-size: 1.5em; 
+  }
+}
+
+@media (max-width: 1240px) {
+  .intro-visuals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .intro-visuals h1 {
+    font-size: 4.3em;
+    font-weight: 800;
+  }
+  #intro-img img {
+    display: none;
+    margin-left: 0;
+  }
+
+  .intro-text {
+    max-width: 100%; 
+    text-align: center; /* center the text */
+  }
+
+  #intro-links {
+    display: flex;
+    flex-direction: row; /* stack items horizontally */
+    justify-content: center; /* center the links horizontally */
+    align-items: center; 
+  }
+
 }

@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8" />
   <title>Landing Page</title>
-  <link rel="stylesheet" href="style_landing.css" />
+  <link rel="stylesheet" href="css/style_landing.css" />
   
 </head>
 <body>
@@ -33,26 +33,28 @@
   </nav>
 
   <!-- home section -->
-  <section id="home" class="intro-section">
+  <section id="home" class="intro-section fade-in-section">
     <div id="particles-js-home"></div>
 
     <div class="intro-visuals">
       <div class="intro-container">
-        <h1>Hello,<br>I'm Tamir Shem Tov</h1>
-        <p id="intro-description">A Computer Science Student passionate about building impactful projects.</p>
-        <p id="intro-subtext">Explore my work, skills, and connect with me below.</p>
+        <div class="intro-text">
+          <h1>Hello,<br>I'm Tamir Shem Tov</h1>
+          <p id="intro-description">A Computer Science Student passionate about building impactful projects.</p>
+          <p id="intro-subtext">Explore my work, skills, and connect with me below.</p>
+        </div>
         <div id="intro-links">
           <a href="resume.pdf" class="resume-button" target="_blank">View Resume</a>
           <a href="https://github.com/TDShemTov" class="socials-button" target="_blank">
-            <img src="github_logo.png" alt="GitHub" class="social-icon" />
+            <img src="images/github_logo.png" alt="GitHub" class="social-icon" />
           </a>
           <a href="https://linkedin.com/in/tshemtov" class="socials-button" target="_blank">
-            <img src="linkedin_logo.png" alt="LinkedIn" class="social-icon" />
+            <img src="images/linkedin_logo.png" alt="LinkedIn" class="social-icon" />
           </a> 
         </div>        
       </div>
       <div id="intro-img">
-        <img src="snorlax.jpg" alt="profile_image" />
+        <img src="images/snorlax.jpg" alt="profile_image" />
       </div>
     </div>
 
@@ -63,17 +65,17 @@
   </section>
 
   <!-- projects section -->
-  <section id="projects" class="projects-section">
+  <section id="projects" class="projects-section fade-in-section">
     <h2>Projects</h2>
     <div class="projects-flex">
       <div class="project">
 
         <div class="project-image">
-          <img src="cnn_prune_logo.png" alt="pruning cnn" />
+          <img src="images/cnn_prune_logo.png" alt="pruning cnn" />
         </div>
 
         <div class="project-title">
-          <h3>Pruning Convolutional Neural Networks Using Filter Embeddings</h3>
+          <h3>Pruning CNN Using Filter Embeddings</h3>
         </div>
 
         <div class="project-description">
@@ -81,7 +83,7 @@
         </div>
 
         <div class="project-button">
-          <a href="project_1.html" class="button">View Project</a>
+          <a href="https://github.com/TDShemTov/scholarship-research" class="button" target="_blank">View Project</a>
         </div>
         
       </div>
@@ -89,7 +91,7 @@
       <div class="project">
 
         <div class="project-image">
-          <img src="write-it_logo.png" alt="write-it_logo" />
+          <img src="images/write-it_logo.png" alt="write-it_logo" />
         </div>
 
         <div class="project-title">
@@ -101,14 +103,14 @@
         </div>
 
         <div class="project-button">
-          <a href="project_2.html" class="button">View Project</a>
+            <a href="https://github.com/jccoulson/write-it" class="button" target="_blank">View Project</a>
         </div>
     </div>
 
     <div class="project">
 
       <div class="project-image">
-        <img src="insightify_logo.png" alt="insightify_logo" />
+        <img src="images/insightify_logo.png" alt="insightify_logo" />
       </div>
 
       <div class="project-title">
@@ -120,7 +122,7 @@
       </div>
 
       <div class="project-button">
-        <a href="project_3.html" class="button">View Project</a>
+        <a href="https://github.com/TDShemTov/nlp-sentiment-analysis" class="button" target="_blank">View Project</a>
       </div>
       
     </div>
@@ -128,7 +130,7 @@
     <div class="project">
 
       <div class="project-image">
-        <img src="shoeclass_logo.png" alt="shoeclass_logo" />
+        <img src="images/shoeclass_logo.png" alt="shoeclass_logo" />
       </div>
 
       <div class="project-title">
@@ -140,7 +142,7 @@
       </div>
 
       <div class="project-button">
-        <a href="project_3.html" class="button">View Project</a>
+        <a href="https://github.com/TDShemTov/shoe-identify-CNN" class="button" target="_blank">View Project</a>
       </div>
       
     </div>
@@ -149,7 +151,7 @@
     <!-- <div class="project">
 
       <div class="project-image">
-        <img src="arduino_logo.png" alt="arduino_logo" />
+        <img src="images/arduino_logo.png" alt="arduino_logo" />
       </div>
 
       <div class="project-title">
@@ -169,7 +171,7 @@
     </div>
   </section>
 
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section fade-in-section">
     <div id="particles-js-skills"></div>
 
     <h2>Skills & Experience</h2>
@@ -179,27 +181,27 @@
     <div class="skills-grid">
       <div class="skill-card">
         <!-- <p>Python</p> -->
-        <img src="python_logo.png" alt="profile_image" />
+        <img src="images/python_logo.png" alt="profile_image" />
       </div>
       <div class="skill-card">
         <!-- <p>C++</p> -->
-        <img src="C++_logo.png" alt="profile_image" />
+        <img src="images/C++_logo.png" alt="profile_image" />
       </div>      
       <div class="skill-card">
         <!-- <p>Java</p> -->
-        <img src="java_logo.png" alt="profile_image" />
+        <img src="images/java_logo.png" alt="profile_image" />
       </div>      
       <div class="skill-card">
         <!-- <p>HTML</p> -->
-        <img src="html_logo.png" alt="profile_image" />
+        <img src="images/html_logo.png" alt="profile_image" />
       </div>      
       <div class="skill-card">
         <!-- <p>CSS</p> -->
-        <img src="css_logo.png" alt="profile_image" />
+        <img src="images/css_logo.png" alt="profile_image" />
       </div>
       <div class="skill-card">
         <!-- <p>Javascript</p> -->
-        <img src="javascript_logo.png" alt="profile_image" />
+        <img src="images/javascript_logo.png" alt="profile_image" />
       </div>
     </div>
 
@@ -207,31 +209,31 @@
 
     <div class="skills-grid">
       <div class="skill-card">
-        <img src="pytorch_logo.png" alt="python_logo" />
+        <img src="images/pytorch_logo.png" alt="python_logo" />
       </div>
       <div class="skill-card">
-        <img src="pandas_logo.png" alt="Pandas_logo" />
+        <img src="images/pandas_logo.png" alt="Pandas_logo" />
       </div>
       <div class="skill-card">
-        <img src="sklearn_logo.png" alt="scikit-learn_logo" />
+        <img src="images/sklearn_logo.png" alt="scikit-learn_logo" />
       </div>
       <div class="skill-card">
-        <img src="aws_logo.png" alt="aws_logo" />
+        <img src="images/aws_logo.png" alt="aws_logo" />
       </div>
     
   </section>
 
-  <section id="contact" class="contact-section">
+  <section id="contact" class="contact-section fade-in-section">
     <h3>Contact Me</h3>
     <p>
       If you’d like to get in touch, feel free to drop me an email or connect with me on LinkedIn.</p>
     </p>
     <a href="mailto:tamirshemtov@gmail.com" class="contact-button" target="_blank">
-      <img src="mail_logo.png" alt="mail_logo" class="social-icon" />
+      <img src="images/mail_logo.png" alt="mail_logo" class="social-icon" />
     </a> 
 
     <a href="https://linkedin.com/in/tshemtov" class="contact-button" target="_blank">
-      <img src="linkedin_logo.png" alt="LinkedIn" class="social-icon" />
+      <img src="images/linkedin_logo.png" alt="LinkedIn" class="social-icon" />
     </a> 
     <p>Thank you for visiting my portfolio!</p>
   </section>
@@ -242,6 +244,8 @@
 
   <!-- connect to the partices.js file -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="particles.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/fadein.js" defer></script>
+
 </body>
 </html>
